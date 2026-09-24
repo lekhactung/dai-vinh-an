@@ -1,26 +1,221 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   DVA STEEL — DESIGN SYSTEM TOKENS
+   ============================================================ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ── Màu thương hiệu ── */
+  --color-dva-charcoal:       #1C1F26;
+  --color-dva-charcoal-dark:  #13151A;
+  --color-dva-steel:          #3D4A5C;
+  --color-dva-steel-light:    #6B7A8D;
+  --color-dva-orange:         #D4601A;
+  --color-dva-orange-hover:   #B85216;
+  --color-dva-orange-light:   #F0842A;
+  --color-dva-bg:             #F5F6F8;
+  --color-dva-bg-card:        #FFFFFF;
+  --color-dva-border:         #E2E5EA;
+  --color-dva-text:           #1C1F26;
+  --color-dva-text-muted:     #5A6475;
+
+  /* ── shadcn mapping ── */
+  --color-background:         var(--background);
+  --color-foreground:         var(--foreground);
+  --font-sans:                var(--font-inter);
+  --font-mono:                var(--font-geist-mono);
+  --font-heading:             var(--font-inter);
+
+  /* ── shadcn sidebar/chart tokens ── */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm:  calc(var(--radius) * 0.6);
+  --radius-md:  calc(var(--radius) * 0.8);
+  --radius-lg:  var(--radius);
+  --radius-xl:  calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: oklch(0.98 0.002 240);
+  --foreground: oklch(0.13 0.015 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.13 0.015 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.13 0.015 240);
+  --primary: oklch(0.15 0.015 240);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.94 0.005 240);
+  --secondary-foreground: oklch(0.15 0.015 240);
+  --muted: oklch(0.94 0.005 240);
+  --muted-foreground: oklch(0.45 0.01 240);
+  --accent: oklch(0.65 0.18 40);    /* orange accent */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.9 0.005 240);
+  --input: oklch(0.9 0.005 240);
+  --ring: oklch(0.65 0.18 40);
+  --radius: 0.5rem;
+  --chart-1: oklch(0.65 0.18 40);
+  --chart-2: oklch(0.45 0.01 240);
+  --chart-3: oklch(0.35 0.02 240);
+  --chart-4: oklch(0.6 0.12 200);
+  --chart-5: oklch(0.7 0.15 80);
+  --sidebar: oklch(0.15 0.015 240);
+  --sidebar-foreground: oklch(0.85 0.005 240);
+  --sidebar-primary: oklch(0.65 0.18 40);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.22 0.015 240);
+  --sidebar-accent-foreground: oklch(0.85 0.005 240);
+  --sidebar-border: oklch(0.25 0.01 240);
+  --sidebar-ring: oklch(0.65 0.18 40);
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth;
+    font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+
+@layer utilities {
+  /* Container centered */
+  .container-dva {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  /* DVA brand colors */
+  .text-dva-orange  { color: #D4601A; }
+  .bg-dva-orange    { background-color: #D4601A; }
+  .bg-dva-charcoal  { background-color: #1C1F26; }
+  .text-dva-charcoal { color: #1C1F26; }
+  .border-dva-orange { border-color: #D4601A; }
+
+  /* CTA button — primary orange */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           rounded-sm bg-[#D4601A] px-6 py-3 text-sm font-semibold
+           uppercase tracking-wide text-white
+           transition-all duration-200
+           hover:bg-[#B85216] hover:-translate-y-0.5 hover:shadow-lg
+           active:translate-y-0 focus-visible:outline-none
+           focus-visible:ring-2 focus-visible:ring-[#D4601A] focus-visible:ring-offset-2;
+  }
+
+  /* CTA button — outline variant */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2
+           rounded-sm border-2 border-white px-6 py-3 text-sm font-semibold
+           uppercase tracking-wide text-white
+           transition-all duration-200
+           hover:bg-white hover:text-[#1C1F26] hover:-translate-y-0.5
+           active:translate-y-0 focus-visible:outline-none
+           focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2;
+  }
+
+  /* Section heading */
+  .section-heading {
+    @apply text-3xl font-bold tracking-tight text-[#1C1F26] md:text-4xl;
+  }
+
+  .section-subheading {
+    @apply mt-4 text-base text-[#5A6475] md:text-lg;
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  /* Gradient text orange */
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#D4601A] to-[#F0842A] bg-clip-text text-transparent;
+  }
 }
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes counterUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Stagger delays */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
