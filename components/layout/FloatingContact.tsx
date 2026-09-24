@@ -23,7 +23,7 @@ export default function FloatingContact() {
                        opacity-0 group-hover:opacity-100
                        transition-opacity duration-200
                        pointer-events-none">
-                        Gọi Hotline
+                         Hotline Tư Vấn
                     </span>
                 </a>
 
