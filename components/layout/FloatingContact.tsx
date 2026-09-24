@@ -23,7 +23,7 @@ export default function FloatingContact() {
                        opacity-0 group-hover:opacity-100
                        transition-opacity duration-200
                        pointer-events-none">
-                         Hotline Tư Vấn
+                        Hotline Tư Vấn
                     </span>
                 </a>
 
@@ -47,6 +47,42 @@ export default function FloatingContact() {
                        pointer-events-none">
                         Chat Zalo
                     </span>
+                </a>
+            </div>
+
+            <div className="flex md:hidden fixed bottom-0 left-0 right-0 z-50 
+                            bg-white border-t border-gray-200 shadow-lg"
+                style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+            >
+                <a href={formatPhoneHref(primaryPhone)}
+                    className="flex-1 flex flex-col items-center justify-center
+                     gap-1 py-2
+                     text-[#D4601A] text-xs font-medium
+                     hover:bg-orange-50 transition-colors">
+                    <Phone size={18} />
+                    <span>Hotline Tư Vấn</span>
+                </a>
+                <a
+                    href={company.social.zalo ?? "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex flex-col items-center justify-center
+                     gap-1 py-2
+                     text-[#0068FF] text-xs font-medium
+                     hover:bg-blue-50 transition-colors"
+                >
+                    <MessageCircle size={18} />
+                    <span>Zalo</span>
+                </a>
+                <a
+                    href="/lien-he"
+                    className="flex-1 flex flex-col items-center justify-center
+                     gap-1 py-2
+                     bg-[#D4601A] text-white text-xs font-medium
+                     hover:bg-[#B85216] transition-colors"
+                >
+                    <span className="text-base leading-none">✉</span>
+                    <span>Báo giá</span>
                 </a>
             </div>
         </>
