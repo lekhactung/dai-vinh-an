@@ -1,7 +1,7 @@
 import type { Company, Stat } from "@/types/company";
 
 export const company: Company = {
-  name: "Công ty TNHH Thương Mại Sản Xuất Đại Vĩnh An",
+  name: "Công ty TNHH Đại Vĩnh An",
   shortName: "Đại Vĩnh An",
   slogan: "Thép cho hiện tại - Vững cho tương lai",
   description:
