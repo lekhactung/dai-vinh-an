@@ -10,34 +10,34 @@
 
 @theme inline {
   /* ── Brand colors ── */
-  --color-dva-charcoal:       #1C1F26;
-  --color-dva-charcoal-dark:  #13151A;
-  --color-dva-steel:          #3D4A5C;
-  --color-dva-steel-light:    #6B7A8D;
+  --color-dva-charcoal: #1C1F26;
+  --color-dva-charcoal-dark: #13151A;
+  --color-dva-steel: #3D4A5C;
+  --color-dva-steel-light: #6B7A8D;
 
   /* Orange scale */
-  --color-dva-orange:         #D4601A;
-  --color-dva-orange-hover:   #B85216;
-  --color-dva-orange-light:   #F0842A;
-  --color-dva-orange-muted:   #FFAD74;
+  --color-dva-orange: #D4601A;
+  --color-dva-orange-hover: #B85216;
+  --color-dva-orange-light: #F0842A;
+  --color-dva-orange-muted: #FFAD74;
 
   /* Zalo */
-  --color-dva-zalo:           #0068FF;
-  --color-dva-zalo-hover:     #0055CC;
+  --color-dva-zalo: #0068FF;
+  --color-dva-zalo-hover: #0055CC;
 
   /* Surfaces & text */
-  --color-dva-bg:             #F5F6F8;
-  --color-dva-bg-card:        #FFFFFF;
-  --color-dva-border:         #E2E5EA;
-  --color-dva-text:           #1C1F26;
-  --color-dva-text-muted:     #5A6475;
+  --color-dva-bg: #F5F6F8;
+  --color-dva-bg-card: #FFFFFF;
+  --color-dva-border: #E2E5EA;
+  --color-dva-text: #1C1F26;
+  --color-dva-text-muted: #5A6475;
 
   /* ── shadcn mapping ── */
-  --color-background:         var(--background);
-  --color-foreground:         var(--foreground);
-  --font-sans:                var(--font-inter);
-  --font-mono:                var(--font-geist-mono);
-  --font-heading:             var(--font-inter);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-inter);
 
   /* ── shadcn sidebar/chart tokens ── */
   --color-sidebar-ring: var(--sidebar-ring);
@@ -69,10 +69,10 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm:  calc(var(--radius) * 0.6);
-  --radius-md:  calc(var(--radius) * 0.8);
-  --radius-lg:  var(--radius);
-  --radius-xl:  calc(var(--radius) * 1.4);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
 }
 
@@ -89,7 +89,8 @@
   --secondary-foreground: oklch(0.15 0.015 240);
   --muted: oklch(0.94 0.005 240);
   --muted-foreground: oklch(0.45 0.01 240);
-  --accent: oklch(0.65 0.18 40);    /* orange accent */
+  --accent: oklch(0.65 0.18 40);
+  /* orange accent */
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.9 0.005 240);
@@ -132,7 +133,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -145,6 +151,7 @@
    ============================================================ */
 
 @layer utilities {
+
   /* Container centered */
   .container-dva {
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
@@ -156,36 +163,54 @@
   }
 
   /* DVA brand color utilities */
-  .text-dva-orange   { color: var(--color-dva-orange); }
-  .bg-dva-orange     { background-color: var(--color-dva-orange); }
-  .bg-dva-charcoal   { background-color: var(--color-dva-charcoal); }
-  .text-dva-charcoal { color: var(--color-dva-charcoal); }
-  .border-dva-orange { border-color: var(--color-dva-orange); }
-  .text-dva-muted    { color: var(--color-dva-text-muted); }
-  .bg-dva-zalo       { background-color: var(--color-dva-zalo); }
-  .text-dva-zalo     { color: var(--color-dva-zalo); }
-  .border-dva-zalo   { border-color: var(--color-dva-zalo); }
+  .text-dva-orange {
+    color: var(--color-dva-orange);
+  }
+
+  .bg-dva-orange {
+    background-color: var(--color-dva-orange);
+  }
+
+  .bg-dva-charcoal {
+    background-color: var(--color-dva-charcoal);
+  }
+
+  .text-dva-charcoal {
+    color: var(--color-dva-charcoal);
+  }
+
+  .border-dva-orange {
+    border-color: var(--color-dva-orange);
+  }
+
+  .text-dva-muted {
+    color: var(--color-dva-text-muted);
+  }
+
+  .bg-dva-zalo {
+    background-color: var(--color-dva-zalo);
+  }
+
+  .text-dva-zalo {
+    color: var(--color-dva-zalo);
+  }
+
+  .border-dva-zalo {
+    border-color: var(--color-dva-zalo);
+  }
+
+  .header-bg {
+    background-color: #fefcfa;
+  }
 
   /* CTA button — primary orange */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2
-           rounded-sm bg-dva-orange px-6 py-3 text-sm font-semibold
-           uppercase tracking-wide text-white
-           transition-all duration-200
-           hover:bg-dva-orange-hover hover:-translate-y-0.5 hover:shadow-lg
-           active:translate-y-0 focus-visible:outline-none
-           focus-visible:ring-2 focus-visible:ring-dva-orange focus-visible:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-dva-orange px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-200 hover:bg-dva-orange-hover hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dva-orange focus-visible:ring-offset-2;
   }
 
   /* CTA button — outline variant */
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2
-           rounded-sm border-2 border-white px-6 py-3 text-sm font-semibold
-           uppercase tracking-wide text-white
-           transition-all duration-200
-           hover:bg-white hover:text-dva-charcoal hover:-translate-y-0.5
-           active:translate-y-0 focus-visible:outline-none
-           focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border-2 border-white px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-200 hover:bg-white hover:text-dva-charcoal hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2;
   }
 
   /* Section heading */
@@ -213,13 +238,27 @@
    ============================================================ */
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes counterUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in-up {
@@ -227,8 +266,22 @@
 }
 
 /* Stagger delays */
-.animate-delay-100 { animation-delay: 100ms; }
-.animate-delay-200 { animation-delay: 200ms; }
-.animate-delay-300 { animation-delay: 300ms; }
-.animate-delay-400 { animation-delay: 400ms; }
-.animate-delay-500 { animation-delay: 500ms; }
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
