@@ -1,3 +1,5 @@
+
+
 import { categories } from "@/data/categories";
 import { company } from "@/data/company";
 import Link from "next/link";
@@ -61,7 +63,7 @@ export default function Footer() {
                                 alt="Đại Vĩnh An – DVA Steel"
                                 width={120}
                                 height={40}
-                                className="h-10 w-auto"
+                                className="w-[120px] h-auto"
                             />
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
