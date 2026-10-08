@@ -4,8 +4,9 @@ import { categories } from "@/data/categories";
 import { company } from "@/data/company";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { formatPhoneHref } from "@/lib/utils";
+import { footerNavLinks as navLinks } from "@/data/nav";
 function FacebookIcon({ size = 16 }: { size?: number }) {
     return (
         <svg
@@ -42,13 +43,6 @@ export default function Footer() {
         label: cat.name,
         href: `/san-pham/${cat.slug}`
     }));
-
-    const navLinks = [
-        { label: "Giới thiệu", href: "/gioi-thieu" },
-        { label: "Dự án", href: "/du-an" },
-        { label: "Tin tức", href: "/tin-tuc" },
-        { label: "Liên hệ", href: "/lien-he" },
-    ];
 
     return (
         <footer className="bg-dva-charcoal text-white">

@@ -6,19 +6,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { X, Phone, MessageCircle} from "lucide-react";
 import { company, primaryPhone, primaryPhoneDisplay } from "@/data/company"
+import { navLinks } from "@/data/nav";
+
 interface MobileMenuProps {
     isOpen: boolean;
     onClose: () => void;
 }
-
-const navLinks = [
-    { label: "Trang chủ", href: "/" },
-    { label: "Giới thiệu", href: "/gioi-thieu" },
-    { label: "Sản phẩm", href: "/san-pham" },
-    { label: "Dự án", href: "/du-an" },
-    { label: "Tin tức", href: "/tin-tuc" },
-    { label: "Liên hệ", href: "/lien-he" },
-];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     const pathname = usePathname();
@@ -29,7 +22,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 onClick={onClose}
                 aria-hidden="true"
                 className={cn(
-                    "fixed inset-0 z-40 bg-black/40 md:hidden",
+                    "fixed inset-0 z-40 bg-black/40 lg:hidden",
                     "transition-opacity duration-300",
                     isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 )}
@@ -38,7 +31,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             {/* Side panel */}
             <div
                 className={cn(
-                    "fixed top-0 right-0 h-full w-72 z-50 bg-white md:hidden",
+                    "fixed top-0 right-0 h-full w-72 z-50 bg-white lg:hidden",
                     "flex flex-col",
                     "transform transition-transform duration-300 ease-in-out",
                     isOpen ? "translate-x-0" : "translate-x-full"
