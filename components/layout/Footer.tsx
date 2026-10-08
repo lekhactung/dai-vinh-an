@@ -63,7 +63,7 @@ export default function Footer() {
                         <p className="text-gray-400 text-sm leading-relaxed">
                             {company.description}
                         </p>
-                        <div className="flex gap-3 mt-2">
+                        {/* <div className="flex gap-3 mt-2">
                             {company.social.facebook && (
                                 <a
                                     href={company.social.facebook}
@@ -90,7 +90,7 @@ export default function Footer() {
                                     <ZaloIcon size={16} />
                                 </a>
                             )}
-                        </div>
+                        </div> */}
                     </div>
 
                     <div>

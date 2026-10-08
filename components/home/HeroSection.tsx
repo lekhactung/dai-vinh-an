@@ -18,6 +18,8 @@ export default function HeroSection() {
                 quality={80}
                 className="object-cover object-center"
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/30 to-black/50 pointer-events-none" />
+            
             <div className="container-dva relative z-10 py-20">
                 <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-dva-orange">
                     {company.shortName}

@@ -3,7 +3,7 @@ export const navLinks = [
     { label: "Giới thiệu", href: "/gioi-thieu" },
     { label: "Sản phẩm", href: "/san-pham" },
     { label: "Dự án", href: "/du-an" },
-    { label: "Tin tức", href: "/tin-tuc" },
+    // { label: "Tin tức", href: "/tin-tuc" },
     { label: "Liên hệ", href: "/lien-he" },
 ];
 

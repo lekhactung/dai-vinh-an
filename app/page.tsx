@@ -11,13 +11,13 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <StatsSection/>
-      <AboutSection/>
-      <FeaturedProducts/>
-      <FeaturedProjects/>
-      <WhyChooseUs/>
-      <PartnersSection/>
-      <CtaBanner/>
+      <StatsSection />
+      <AboutSection />
+      <FeaturedProducts />
+      <FeaturedProjects />
+      <WhyChooseUs />
+      <PartnersSection />
+      <CtaBanner />
     </main>
   );
 }
