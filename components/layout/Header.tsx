@@ -8,16 +8,7 @@ import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import MobileMenu from "./MobileMenu";
 import FloatingContact from "./FloatingContact";
-
-
-const navLinks = [
-    { label: "Trang chủ", href: "/" },
-    { label: "Giới thiệu", href: "/gioi-thieu" },
-    { label: "Sản phẩm", href: "/san-pham" },
-    { label: "Dự án", href: "/du-an" },
-    { label: "Tin tức", href: "/tin-tuc" },
-    { label: "Liên hệ", href: "/lien-he" },
-];
+import { navLinks } from "@/data/nav";
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
