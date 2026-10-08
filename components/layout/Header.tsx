@@ -37,7 +37,7 @@ export default function Header() {
                     "fixed top-0 left-0 right-0 z-30 transition-all duration-300",
                     isScrolled
                         ? "bg-white/95 backdrop-blur-sm shadow-md"
-                        : "bg-[#1C1F26]"
+                        : "bg-dva-charcoal"
                 )}
             >
                 <div className="container-dva flex items-center justify-between h-16 lg:h-20">
@@ -76,10 +76,10 @@ export default function Header() {
                                         "px-4 py-2 text-sm font-medium rounded-sm transition-colors",
                                         /* Màu text thay đổi theo scroll */
                                         isScrolled
-                                            ? "text-gray-700 hover:text-[#D4601A]"
-                                            : "text-white/90 hover:text-[#FFAD74]",
+                                            ? "text-gray-700 hover:text-dva-orange"
+                                            : "text-white/90 hover:text-dva-orange-muted",
                                         /* Active state luôn orange */
-                                        isActive && "text-[#D4601A] font-semibold"
+                                        isActive && "text-dva-orange font-semibold"
                                     )}
                                 >
                                     {link.label}
@@ -95,10 +95,10 @@ export default function Header() {
                         <Link
                             href="/lien-he"
                             className="hidden sm:inline-flex items-center justify-center gap-2
-                         rounded-sm bg-[#D4601A] px-5 py-2.5
+                         rounded-sm bg-dva-orange px-5 py-2.5
                          text-sm font-semibold uppercase tracking-wide text-white
                          transition-all duration-200
-                         hover:bg-[#B85216] hover:-translate-y-0.5 hover:shadow-lg"
+                         hover:bg-dva-orange-hover hover:-translate-y-0.5 hover:shadow-lg"
                         >
                             Nhận Báo Giá
                         </Link>

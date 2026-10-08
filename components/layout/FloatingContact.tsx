@@ -14,7 +14,7 @@ export default function FloatingContact({ hiddenOnMobile = false }: FloatingCont
                 <a href={formatPhoneHref(primaryPhone)}
                     className="group relative flex items-center justify-center
                      w-12 h-12 rounded-full
-                     bg-[#D4601A] text-white
+                     bg-dva-orange text-white
                      shadow-lg hover:shadow-xl
                      hover:scale-110 transition-all duration-200"
                     aria-label={`Gọi ngay : ${primaryPhoneDisplay}`}
@@ -36,7 +36,7 @@ export default function FloatingContact({ hiddenOnMobile = false }: FloatingCont
                     rel="noopener noreferrer"
                     className="group relative flex items-center justify-center
                      w-12 h-12 rounded-full
-                     bg-[#0068FF] text-white
+                     bg-dva-zalo text-white
                      shadow-lg hover:shadow-xl
                      hover:scale-110 transition-all duration-200"
                     aria-label="Chat Zalo"
@@ -66,7 +66,7 @@ export default function FloatingContact({ hiddenOnMobile = false }: FloatingCont
                 <a href={formatPhoneHref(primaryPhone)}
                     className="flex-1 flex flex-col items-center justify-center
                      gap-1 py-2
-                     text-[#D4601A] text-xs font-medium
+                     text-dva-orange text-xs font-medium
                      hover:bg-orange-50 transition-colors">
                     <Phone size={18} />
                     <span>Hotline Tư Vấn</span>
@@ -77,7 +77,7 @@ export default function FloatingContact({ hiddenOnMobile = false }: FloatingCont
                     rel="noopener noreferrer"
                     className="flex-1 flex flex-col items-center justify-center
                      gap-1 py-2
-                     text-[#0068FF] text-xs font-medium
+                     text-dva-zalo text-xs font-medium
                      hover:bg-blue-50 transition-colors"
                 >
                     <MessageCircle size={18} />
@@ -87,8 +87,8 @@ export default function FloatingContact({ hiddenOnMobile = false }: FloatingCont
                     href="/lien-he"
                     className="flex-1 flex flex-col items-center justify-center
                      gap-1 py-2
-                     bg-[#D4601A] text-white text-xs font-medium
-                     hover:bg-[#B85216] transition-colors"
+                     bg-dva-orange text-white text-xs font-medium
+                     hover:bg-dva-orange-hover transition-colors"
                 >
                     <span className="text-base leading-none"><Mail/></span>
                     <span>Báo giá</span>

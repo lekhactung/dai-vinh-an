@@ -51,7 +51,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-[#1C1F26] text-white">
+        <footer className="bg-dva-charcoal text-white">
 
             <div className="container-dva py-12 lg:py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -78,7 +78,7 @@ export default function Footer() {
                                     aria-label="Facebook Đại Vĩnh An"
                                     className="w-9 h-9 flex items-center justify-center
                              rounded-full bg-white/10
-                             hover:bg-[#D4601A] transition-colors"
+                             hover:bg-dva-orange transition-colors"
                                 >
                                     <FacebookIcon size={16} />
                                 </a>
@@ -91,7 +91,7 @@ export default function Footer() {
                                     aria-label="Zalo Đại Vĩnh An"
                                     className="w-9 h-9 flex items-center justify-center
                              rounded-full bg-white/10 text-xs font-bold
-                             hover:bg-[#0068FF] transition-colors"
+                             hover:bg-dva-zalo transition-colors"
                                 >
                                     <ZaloIcon size={16} />
                                 </a>
@@ -100,7 +100,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-[#D4601A]">
+                        <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-dva-orange">
                             Sản Phẩm
                         </h3>
                         <ul className="space-y-2">
@@ -118,7 +118,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-[#D4601A]">
+                        <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-dva-orange">
                             Liên Kết
                         </h3>
                         <ul className="space-y-2">
@@ -136,16 +136,16 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-[#D4601A]">
+                        <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-dva-orange">
                             Liên Hệ
                         </h3>
                         <ul className="space-y-3">
                             <li className="flex gap-3 text-sm text-gray-400">
-                                <MapPin size={16} className="shrink-0 mt-0.5 text-[#D4601A]" />
+                                <MapPin size={16} className="shrink-0 mt-0.5 text-dva-orange" />
                                 <span>{company.headquarter.address}</span>
                             </li>
                             <li className="flex gap-3 text-sm text-gray-400">
-                                <Phone size={16} className="shrink-0 mt-0.5 text-[#D4601A]" />
+                                <Phone size={16} className="shrink-0 mt-0.5 text-dva-orange" />
                                 <a
                                     href={formatPhoneHref(company.headquarter.phones[0])}
                                     className="hover:text-white transition-colors"
@@ -154,7 +154,7 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li className="flex gap-3 text-sm text-gray-400">
-                                <Mail size={16} className="shrink-0 mt-0.5 text-[#D4601A]" />
+                                <Mail size={16} className="shrink-0 mt-0.5 text-dva-orange" />
                                 <a
                                     href={`mailto:${company.email}`}
                                     className="hover:text-white transition-colors"
@@ -163,7 +163,7 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li className="flex gap-3 text-sm text-gray-400">
-                                <Clock size={16} className="shrink-0 mt-0.5 text-[#D4601A]" />
+                                <Clock size={16} className="shrink-0 mt-0.5 text-dva-orange" />
                                 <span>{company.workingHours}</span>
                             </li>
                         </ul>

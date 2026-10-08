@@ -84,7 +84,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                             "flex items-center px-4 py-3 rounded-md",
                                             "text-sm font-medium transition-colors",
                                             isActive
-                                                ? "bg-[#D4601A] text-white"
+                                                ? "bg-dva-orange text-white"
                                                 : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                                         )}
                                     >
@@ -102,8 +102,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                         href={formatPhoneHref(primaryPhone)}
                         className="flex items-center justify-center gap-2
                                    w-full px-4 py-3 rounded-sm
-                                   bg-[#D4601A] text-white text-sm font-semibold
-                                   hover:bg-[#B85216] transition-colors"
+                                   bg-dva-orange text-white text-sm font-semibold
+                                   hover:bg-dva-orange-hover transition-colors"
                     >
                         <Phone size={16} />
                         {primaryPhoneDisplay}
@@ -114,9 +114,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2
                                    w-full px-4 py-3 rounded-sm
-                                   border-2 border-[#0068FF] text-[#0068FF]
+                                   border-2 border-dva-zalo text-dva-zalo
                                    text-sm font-semibold
-                                   hover:bg-[#0068FF] hover:text-white transition-colors"
+                                   hover:bg-dva-zalo hover:text-white transition-colors"
                     >
                         <MessageCircle size={16} />
                         Chat Zalo

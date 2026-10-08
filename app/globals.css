@@ -9,14 +9,23 @@
    ============================================================ */
 
 @theme inline {
-  /* ── Màu thương hiệu ── */
+  /* ── Brand colors ── */
   --color-dva-charcoal:       #1C1F26;
   --color-dva-charcoal-dark:  #13151A;
   --color-dva-steel:          #3D4A5C;
   --color-dva-steel-light:    #6B7A8D;
+
+  /* Orange scale */
   --color-dva-orange:         #D4601A;
   --color-dva-orange-hover:   #B85216;
   --color-dva-orange-light:   #F0842A;
+  --color-dva-orange-muted:   #FFAD74;
+
+  /* Zalo */
+  --color-dva-zalo:           #0068FF;
+  --color-dva-zalo-hover:     #0055CC;
+
+  /* Surfaces & text */
   --color-dva-bg:             #F5F6F8;
   --color-dva-bg-card:        #FFFFFF;
   --color-dva-border:         #E2E5EA;
@@ -146,22 +155,26 @@
     @apply py-16 md:py-20 lg:py-24;
   }
 
-  /* DVA brand colors */
-  .text-dva-orange  { color: #D4601A; }
-  .bg-dva-orange    { background-color: #D4601A; }
-  .bg-dva-charcoal  { background-color: #1C1F26; }
-  .text-dva-charcoal { color: #1C1F26; }
-  .border-dva-orange { border-color: #D4601A; }
+  /* DVA brand color utilities */
+  .text-dva-orange   { color: var(--color-dva-orange); }
+  .bg-dva-orange     { background-color: var(--color-dva-orange); }
+  .bg-dva-charcoal   { background-color: var(--color-dva-charcoal); }
+  .text-dva-charcoal { color: var(--color-dva-charcoal); }
+  .border-dva-orange { border-color: var(--color-dva-orange); }
+  .text-dva-muted    { color: var(--color-dva-text-muted); }
+  .bg-dva-zalo       { background-color: var(--color-dva-zalo); }
+  .text-dva-zalo     { color: var(--color-dva-zalo); }
+  .border-dva-zalo   { border-color: var(--color-dva-zalo); }
 
   /* CTA button — primary orange */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2
-           rounded-sm bg-[#D4601A] px-6 py-3 text-sm font-semibold
+           rounded-sm bg-dva-orange px-6 py-3 text-sm font-semibold
            uppercase tracking-wide text-white
            transition-all duration-200
-           hover:bg-[#B85216] hover:-translate-y-0.5 hover:shadow-lg
+           hover:bg-dva-orange-hover hover:-translate-y-0.5 hover:shadow-lg
            active:translate-y-0 focus-visible:outline-none
-           focus-visible:ring-2 focus-visible:ring-[#D4601A] focus-visible:ring-offset-2;
+           focus-visible:ring-2 focus-visible:ring-dva-orange focus-visible:ring-offset-2;
   }
 
   /* CTA button — outline variant */
@@ -170,18 +183,18 @@
            rounded-sm border-2 border-white px-6 py-3 text-sm font-semibold
            uppercase tracking-wide text-white
            transition-all duration-200
-           hover:bg-white hover:text-[#1C1F26] hover:-translate-y-0.5
+           hover:bg-white hover:text-dva-charcoal hover:-translate-y-0.5
            active:translate-y-0 focus-visible:outline-none
            focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2;
   }
 
   /* Section heading */
   .section-heading {
-    @apply text-3xl font-bold tracking-tight text-[#1C1F26] md:text-4xl;
+    @apply text-3xl font-bold tracking-tight text-dva-charcoal md:text-4xl;
   }
 
   .section-subheading {
-    @apply mt-4 text-base text-[#5A6475] md:text-lg;
+    @apply mt-4 text-base text-dva-text-muted md:text-lg;
   }
 
   /* Card hover lift */
@@ -191,7 +204,7 @@
 
   /* Gradient text orange */
   .gradient-text {
-    @apply bg-gradient-to-r from-[#D4601A] to-[#F0842A] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-dva-orange to-dva-orange-light bg-clip-text text-transparent;
   }
 }
 
