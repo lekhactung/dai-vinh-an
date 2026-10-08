@@ -73,13 +73,11 @@ export default function RootLayout({
   return (
     <html lang="vi" className={`${inter.variable} h-full`}>
       <body className="min-h-full flex flex-col antialiased bg-background text-foreground">
-        {/* <Header /> */}
+      
         <main className="flex-1 pt-16 lg:pt-20">
           {children}
         </main>
-        <Header></Header>
-        <Footer />
-        <Footer />
+        <Header/>
         <Footer />
       </body>
     </html>
