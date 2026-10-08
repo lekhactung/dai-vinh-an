@@ -1,15 +1,23 @@
 import { company, primaryPhone } from "@/data/company"
 import { Phone } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 
 export default function HeroSection() {
     return (
         <section
             id="hero"
-            className="relative min-h-[90vh] flex items-center bg-cover bg-center bg-dva-charcoal"
-            style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+            className="relative min-h-[90vh] flex items-center bg-dva-charcoal"
         >
+            <Image
+                src="/hero-bg.jpg"
+                alt=""
+                fill
+                priority
+                quality={80}
+                className="object-cover object-center"
+            />
             <div className="container-dva relative z-10 py-20">
                 <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-dva-orange">
                     {company.shortName}
