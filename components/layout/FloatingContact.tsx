@@ -1,9 +1,13 @@
 "use client"
 import { primaryPhone, primaryPhoneDisplay, company } from "@/data/company";
-import { formatPhoneHref } from "@/lib/utils";
-import { Phone, MessageCircle } from "lucide-react";
+import { formatPhoneHref, cn } from "@/lib/utils";
+import { Phone, MessageCircle, Mail} from "lucide-react";
 
-export default function FloatingContact() {
+interface FloatingContactProps {
+    hiddenOnMobile?: boolean;
+}
+
+export default function FloatingContact({ hiddenOnMobile = false }: FloatingContactProps) {
     return (
         <>
             <div className="hidden md:flex fixed right-4 bottom-8 z-50 flex-col gap-3">
@@ -50,8 +54,13 @@ export default function FloatingContact() {
                 </a>
             </div>
 
-            <div className="flex md:hidden fixed bottom-0 left-0 right-0 z-50 
-                            bg-white border-t border-gray-200 shadow-lg"
+            <div
+                className={cn(
+                    "flex md:hidden fixed bottom-0 left-0 right-0 z-50",
+                    "bg-white border-t border-gray-200 shadow-lg",
+                    "transition-transform duration-300",
+                    hiddenOnMobile ? "translate-y-full" : "translate-y-0"
+                )}
                 style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
             >
                 <a href={formatPhoneHref(primaryPhone)}
@@ -81,7 +90,7 @@ export default function FloatingContact() {
                      bg-[#D4601A] text-white text-xs font-medium
                      hover:bg-[#B85216] transition-colors"
                 >
-                    <span className="text-base leading-none">✉</span>
+                    <span className="text-base leading-none"><Mail/></span>
                     <span>Báo giá</span>
                 </a>
             </div>
