@@ -10,7 +10,7 @@ export const projects: Project[] = [
     products: ["Thép hình H", "Xà gồ C", "Thép hộp"],
     description:
       "Cung cấp toàn bộ kết cấu thép cho nhà xưởng sản xuất tại khu công nghiệp Bình Dương. Diện tích 5.000m², khẩu độ 30m, sử dụng thép hình H200 cho cột và dầm chính.",
-    images: ["/images/projects/nha-xuong-binh-duong-1.jpg"],
+    images: ["/factory.jpg"],
     year: 2024,
     featured: true,
   },
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     products: ["Thép hình I", "Xà gồ Z", "Thép tấm A36"],
     description:
       "Cung cấp thép kết cấu cho kho bãi logistics quy mô lớn tại Long An. Bao gồm dầm I200, xà gồ Z150 và thép tấm sàn.",
-    images: ["/images/projects/kho-logistics-1.jpg"],
+    images: ["/factory.jpg"],
     year: 2024,
     featured: true,
   },
