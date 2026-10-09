@@ -7,7 +7,7 @@ export const company: Company = {
   description:
     "Chúng tôi luôn đặt chất lượng và sự hài lòng của khách hàng lên hàng đầu, cam kết cung cấp thép đạt tiêu chuẩn quốc tế, đảm bảo tiến độ và hiệu quả cho mọi công trình.",
   email: "thucmy25@gmail.com",
-  website: "https://daivinhan.com",
+  website: "https://dai-vinh-an.vercel.app/",
   workingHours: "Thứ 2 – Thứ 7: 7:00 – 17:30",
   headquarter: {
     name: "Trụ Sở Chính",
